@@ -43,6 +43,7 @@ public class MovementComponent : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(_rb.velocity.x);
         if(_direction.x != 0)
         {
             _rb.AddForce(_direction * _speed);
