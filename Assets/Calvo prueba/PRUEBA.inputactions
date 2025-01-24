@@ -1,0 +1,82 @@
+{
+    "name": "PRUEBA",
+    "maps": [
+        {
+            "name": "HorizontalMovement",
+            "id": "1efb46ed-1043-43c2-91cb-3617d936e372",
+            "actions": [
+                {
+                    "name": "Left",
+                    "type": "Button",
+                    "id": "e4e969e5-0cf5-4227-8b44-43a712f9e006",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right",
+                    "type": "Button",
+                    "id": "ff129692-a5c0-418c-8684-6d9e5fc28b50",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "24b1e5e9-9fcf-42da-bc25-01eb7b07153c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b969933-1ed7-47ed-95f3-af80402f2066",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Cobete",
+            "id": "f2133e44-ae79-47e6-9093-55237795ec9a",
+            "actions": [
+                {
+                    "name": "Cobete",
+                    "type": "Button",
+                    "id": "d765db79-3c02-42ad-8b84-a7a0b98c4c3f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ab78b1ec-6b6e-40aa-9269-f5cbae32d947",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cobete",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
