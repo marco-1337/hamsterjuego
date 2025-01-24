@@ -9,8 +9,8 @@ public class HamsterInputProvider : MonoBehaviour
     [SerializeField] private InputActionReference _moveRightInputActionReference;
     [SerializeField] private InputActionReference _rocketInputActionReference;
 
-    private MovementComponent _movementComponent;
-    private Impulsor _impulsor;
+    [SerializeField] private MovementComponent _movementComponent;
+    [SerializeField] private Impulsor _impulsor;
 
     private void Awake()
     {
