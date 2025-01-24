@@ -61,7 +61,7 @@ public class HamsterInputProvider : MonoBehaviour
     private void OnLeftInputRecieved(InputAction.CallbackContext obj) => setPlayerDirection(new Vector2(-1, 0));
     private void OnRightInputRecieved(InputAction.CallbackContext obj) => setPlayerDirection(new Vector2(1, 0));
 
-    private void OnRocketInputRecieved(InputAction.CallbackContext obj) => _impulsor.Setimpulse(true);
+    private void OnRocketInputRecieved(InputAction.CallbackContext obj) => _impulsor.SetImpulse(true);
 
     //Soltar
     private void OnLeftInputReleased(InputAction.CallbackContext obj) => _movementComponent.LeftKeyReleased();

@@ -18,17 +18,17 @@ public class MovementComponent : MonoBehaviour
     #endregion
 
     #region methods
-    public void setPlayerDirection(Vector2 dir)
+    public void SetDirection(Vector2 dir)
     {
         _direction = dir;
     }
 
-    public void rightKeyReleased()
+    public void RightKeyReleased()
     {
         if (_direction.x == 1.0)
             _direction.x = 0;
     }
-    public void leftKeyReleased()
+    public void LeftKeyReleased()
     {
         if (_direction.x == -1.0)
             _direction.x = 0;

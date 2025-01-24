@@ -12,7 +12,7 @@ public class Impulsor : MonoBehaviour
         
     }
 
-    void SetImpulse(bool isImpulsing)
+    public void SetImpulse(bool isImpulsing)
     {
 
     }
