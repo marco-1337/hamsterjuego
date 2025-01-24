@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputPrueba : MonoBehaviour
+public class HamsterInputProvider : MonoBehaviour
 {
     [SerializeField] private InputActionReference _moveLeftInputActionReference;
     [SerializeField] private InputActionReference _moveRightInputActionReference;

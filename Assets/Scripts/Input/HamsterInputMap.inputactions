@@ -1,5 +1,5 @@
 {
-    "name": "PRUEBA",
+    "name": "HamsterInputMap",
     "maps": [
         {
             "name": "HorizontalMovement",
@@ -50,11 +50,11 @@
             ]
         },
         {
-            "name": "Cobete",
+            "name": "Rocket",
             "id": "f2133e44-ae79-47e6-9093-55237795ec9a",
             "actions": [
                 {
-                    "name": "Cobete",
+                    "name": "Impulse",
                     "type": "Button",
                     "id": "d765db79-3c02-42ad-8b84-a7a0b98c4c3f",
                     "expectedControlType": "Button",
@@ -71,7 +71,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Cobete",
+                    "action": "Impulse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
