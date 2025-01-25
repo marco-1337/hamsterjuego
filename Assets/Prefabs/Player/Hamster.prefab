@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 2254754156484803652}
   - component: {fileID: 1762995398276342970}
   - component: {fileID: 8731038827389784226}
+  - component: {fileID: -8985103906750821260}
   m_Layer: 0
   m_Name: Hamster
   m_TagString: Untagged
@@ -463,3 +464,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _idle: {fileID: 21300000, guid: 72a662dbbe30ade4c924589860b18420, type: 3}
   _dizzy: {fileID: 21300000, guid: 69211b4a1baf8664690eb3fd968e96aa, type: 3}
+--- !u!114 &-8985103906750821260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565184717736063383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee562e5d1e8dbc64d90995787944e775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guardado: {fileID: 11400000, guid: 01ac1d1f70271454a859c5fdfe1a9d8a, type: 2}
