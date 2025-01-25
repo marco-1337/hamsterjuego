@@ -14,7 +14,7 @@ public class MovementComponent : MonoBehaviour
     private float _maxSpeed = 400.0f;
 
     [SerializeField]
-    private float _threshold = 4.0f;
+    private float _threshold = 1.0f;
 
     private Vector2 _moveDir = Vector2.zero;
 

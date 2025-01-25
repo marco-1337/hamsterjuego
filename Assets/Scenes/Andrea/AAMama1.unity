@@ -393,10 +393,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5258026655281922094, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: _threshold
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6565184717736063383, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: m_Name
       value: Hamster
