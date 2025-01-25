@@ -18,6 +18,8 @@ public class Impulsor : MonoBehaviour
     Rigidbody2D _myRigidbody;
     [SerializeField]
     bool _isJumping = false, _haveFuel = true;
+    [SerializeField]
+    private GameObject _fuegote;
 
     float _actualFuelTime = 0.0f;
     // Start is called before the first frame update
@@ -36,6 +38,12 @@ public class Impulsor : MonoBehaviour
     {
         _myRigidbody.AddForce(new Vector2(_transform.up.x, _transform.up.y).normalized * _force);
     }
+
+    private void EnableFire(bool isPropelling)
+    {
+        if(_fuegote.activeSelf != isPropelling)
+            _fuegote.SetActive(isPropelling);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -44,10 +52,13 @@ public class Impulsor : MonoBehaviour
             _actualFuelTime += Time.deltaTime;
             _haveFuel = _impulseTime > _actualFuelTime;
             if(_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+
+            EnableFire(true);
         }
         else if (!_haveFuel)
         {
             if (_UI_fuel != null) _UI_fuel.Overheated(true);
+            EnableFire(false);
         }
         if (_groundDetector.IsGrounded())
         {
@@ -55,10 +66,15 @@ public class Impulsor : MonoBehaviour
             _haveFuel = true;
             if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
             if (_UI_fuel != null) _UI_fuel.Overheated(false);
+
+            EnableFire(false);
         }
     }
     private void FixedUpdate()
     {
-        if (_isJumping && _haveFuel) Impulse();
+        if (_isJumping && _haveFuel)
+        {
+            Impulse();
+        }
     }
 }
