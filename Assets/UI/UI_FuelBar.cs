@@ -6,24 +6,25 @@ using UnityEngine.UI;
 public class UI_Fuel : MonoBehaviour
 {
     Slider _fuelUI;
-    [SerializeField] 
-    private Image _fuelIndicator;
     [SerializeField]
     private float _lerpColorTime = 1.0f;
     [SerializeField]
-    private Color _originalColor = Color.red, _alertColor = Color.yellow;
+    GameObject _overheatIndicator;
     // Start is called before the first frame update
     void Start()
     {
+        _overheatIndicator.SetActive(false);
         _fuelUI = GetComponent<Slider>();
     }
     public void SetFuelBar(float actualFuelTime)
     {
         _fuelUI.value = actualFuelTime;
     }
-    public void ShiftColor()
+    public void Overheated(bool a)
     {
-        _fuelIndicator.color = Color.Lerp(_originalColor, _alertColor, _lerpColorTime);
+        Debug.Log("b");
+        _overheatIndicator.SetActive(a);
+        
     }
 
     // Update is called once per frame

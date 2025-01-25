@@ -19,7 +19,7 @@ public class Impulsor : MonoBehaviour
     [SerializeField]
     bool _isJumping = false, _haveFuel = true;
 
-    float _actualFuelTime = 0.0f, _shiftTime = 0.0f;
+    float _actualFuelTime = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,17 +43,18 @@ public class Impulsor : MonoBehaviour
         {
             _actualFuelTime += Time.deltaTime;
             _haveFuel = _impulseTime > _actualFuelTime;
-            //_UI_fuel.SetFuelBar(_actualFuelTime);
+            if(_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
         }
-        else if (!_groundDetector.IsGrounded() && !_haveFuel)
+        else if (!_haveFuel)
         {
-            //_UI_fuel.ShiftColor();
+            if (_UI_fuel != null) _UI_fuel.Overheated(true);
         }
         if (_groundDetector.IsGrounded())
         {
             _actualFuelTime = .0f;
             _haveFuel = true;
-            //_UI_fuel.SetFuelBar(_actualFuelTime);
+            if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+            if (_UI_fuel != null) _UI_fuel.Overheated(false);
         }
     }
     private void FixedUpdate()
