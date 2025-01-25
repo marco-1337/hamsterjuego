@@ -58,7 +58,7 @@ public class MovementComponent : MonoBehaviour
             Vector2 forcePosition = new Vector2(_transform.position.x, _transform.position.y + _renderer.size.y / 4);
             if(forceDir != Vector2.zero) 
                 _rb.AddForceAtPosition(_moveDir * forceDir * _speed, forcePosition);
-            _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -_maxSpeed, _maxSpeed), 0); 
+            _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -_maxSpeed, _maxSpeed), _rb.velocity.y); 
         }
     }
 }
