@@ -268,9 +268,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 10
   m_LinearDrag: 2
-  m_AngularDrag: 5
+  m_AngularDrag: 2
   m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -295,8 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec326ec5607aff429b95d5cf6b81263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 16
-  _maxSpeed: 40
+  _speed: 200
+  _maxSpeed: 200
 --- !u!114 &3225216054625463048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundDetector: {fileID: 2254754156484803652}
-  _force: 320
+  _force: 160
   _impulseTime: 1
   _isJumping: 0
   _haveFuel: 1
