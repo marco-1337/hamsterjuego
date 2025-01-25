@@ -52,7 +52,7 @@ public class MovementComponent : MonoBehaviour
     {
         if(_direction.x != 0)
         {
-            _rb.AddForceAtPosition(_direction * _speed, _forcePosition);
+            _rb.AddForceAtPosition(_direction  * _speed, _forcePosition);
             _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -_maxSpeed, _maxSpeed), 0); 
         }
     }

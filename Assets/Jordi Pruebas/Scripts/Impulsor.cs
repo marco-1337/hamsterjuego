@@ -46,6 +46,10 @@ public class Impulsor : MonoBehaviour
             _actualFuelTime += Time.deltaTime;
             _haveFuel = _impulseTime > _actualFuelTime;
         }
-        if (_groundDetector.IsGrounded()) _actualFuelTime = .0f;
+        if (_groundDetector.IsGrounded())
+        {
+            _actualFuelTime = .0f;
+            _haveFuel = true;
+        }
     }
 }
