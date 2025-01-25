@@ -16,6 +16,6 @@ public class CameraMovement : MonoBehaviour
             Vector3.Lerp(
                 transform.position, 
                 new Vector3(horizontalTarget,verticalTarget + _verticalOffset, -10), 
-                Time.deltaTime * 3);
+                Time.deltaTime * 4);
     }
 }
