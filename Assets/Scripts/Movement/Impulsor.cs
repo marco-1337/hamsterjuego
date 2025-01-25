@@ -2,29 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Impulsor : MonoBehaviour
 {
     [SerializeField]
     private GroundDetector _groundDetector;
-
+    [SerializeField]
+    private UI_Fuel _UI_fuel;// es la barra de energia 
     [SerializeField]
     float _force = 1;
     [SerializeField]
     float _impulseTime = 1.0f;
     Transform _transform;
-
     Rigidbody2D _myRigidbody;
     [SerializeField]
     bool _isJumping = false, _haveFuel = true;
-    float _actualFuelTime = 0.0f;
 
+    float _actualFuelTime = 0.0f, _shiftTime = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
         _transform = transform;
         _myRigidbody = GetComponentInParent<Rigidbody2D>();
-        Debug.Log(_myRigidbody);
     }
 
     public void SetImpulse(bool isImpulsing)
@@ -34,22 +34,30 @@ public class Impulsor : MonoBehaviour
 
     private void Impulse()
     {
-        _myRigidbody.AddForce(new Vector2(_transform.up.x, _transform.up.y).normalized*_force);
+        _myRigidbody.AddForce(new Vector2(_transform.up.x, _transform.up.y).normalized * _force);
     }
     // Update is called once per frame
     void Update()
     {
         if (_isJumping && _haveFuel)
         {
-            Impulse();
-
             _actualFuelTime += Time.deltaTime;
             _haveFuel = _impulseTime > _actualFuelTime;
+            _UI_fuel.SetFuelBar(_actualFuelTime);
+        }
+        else if (!_groundDetector.IsGrounded() && !_haveFuel)
+        {
+            _UI_fuel.ShiftColor();
         }
         if (_groundDetector.IsGrounded())
         {
             _actualFuelTime = .0f;
             _haveFuel = true;
+            _UI_fuel.SetFuelBar(_actualFuelTime);
         }
+    }
+    private void FixedUpdate()
+    {
+        if (_isJumping && _haveFuel) Impulse();
     }
 }
