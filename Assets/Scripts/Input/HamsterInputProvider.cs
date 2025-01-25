@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,7 @@ public class HamsterInputProvider : MonoBehaviour
         _moveLeftInputActionReference.action.canceled += OnLeftInputReleased;
         _moveRightInputActionReference.action.canceled += OnRightInputReleased;
 
-        _rocketInputActionReference.action.performed += OnRocketInputRecieved;
+        _rocketInputActionReference.action.started += OnRocketInputRecieved;
         _rocketInputActionReference.action.canceled += OnRocketInputReleased;
     }
 
@@ -52,14 +53,14 @@ public class HamsterInputProvider : MonoBehaviour
         _moveLeftInputActionReference.action.canceled -= OnLeftInputReleased;
         _moveRightInputActionReference.action.canceled -= OnRightInputReleased;
 
-        _rocketInputActionReference.action.performed -= OnRocketInputRecieved;
+        _rocketInputActionReference.action.started -= OnRocketInputRecieved;
         _rocketInputActionReference.action.canceled -= OnRocketInputReleased;
     }
 
     #region actions
     //Pulsar
-    private void OnLeftInputRecieved(InputAction.CallbackContext obj) => setPlayerDirection(new Vector2(-1, 0));
-    private void OnRightInputRecieved(InputAction.CallbackContext obj) => setPlayerDirection(new Vector2(1, 0));
+    private void OnLeftInputRecieved(InputAction.CallbackContext obj) => SetPlayerDirection(new Vector2(-1, 0));
+    private void OnRightInputRecieved(InputAction.CallbackContext obj) => SetPlayerDirection(new Vector2(1, 0));
 
     private void OnRocketInputRecieved(InputAction.CallbackContext obj) => _impulsor.SetImpulse(true);
 
@@ -69,5 +70,5 @@ public class HamsterInputProvider : MonoBehaviour
     private void OnRocketInputReleased(InputAction.CallbackContext obj) => _impulsor.SetImpulse(false);
 
     #endregion
-    private void setPlayerDirection(Vector2 direction) => _movementComponent.SetDirection(direction);
+    private void SetPlayerDirection(Vector2 direction) => _movementComponent.SetDirection(direction);
 }

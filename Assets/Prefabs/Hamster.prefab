@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &5455100579337723133
@@ -217,7 +217,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &6828639392878660936
@@ -311,7 +311,8 @@ MonoBehaviour:
   _moveLeftInputActionReference: {fileID: -2000854588270156703, guid: 4f1624c6b06c34145b8ae69d3a6cd41d, type: 3}
   _moveRightInputActionReference: {fileID: -8222074632250381145, guid: 4f1624c6b06c34145b8ae69d3a6cd41d, type: 3}
   _rocketInputActionReference: {fileID: -8966621013679035491, guid: 4f1624c6b06c34145b8ae69d3a6cd41d, type: 3}
-  _movementComponent: {fileID: 0}
+  _stopRocketInputActionReference: {fileID: -6375373471481664279, guid: 4f1624c6b06c34145b8ae69d3a6cd41d, type: 3}
+  _movementComponent: {fileID: 5258026655281922094}
   _impulsor: {fileID: 2613895302226261362}
 --- !u!114 &2613895302226261362
 MonoBehaviour:
@@ -325,4 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efad522b6a7274543b74ab6a9fdcff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 1
+  _force: 1
+  _impulseTime: 1
+  _isJumping: 0
+  _haveFuel: 1
