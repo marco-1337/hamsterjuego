@@ -49,12 +49,11 @@ public class MovementComponent : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(_moveDir.x != 0)
         {
             Vector2 forceDir = _groundDetector.SurfaceVector().Abs();
-            //Debug.Log(forceDir);
             Vector2 forcePosition = new Vector2(_transform.position.x, _transform.position.y + _renderer.size.y / 4);
             if(forceDir != Vector2.zero) 
                 _rb.AddForceAtPosition(_moveDir * forceDir * _speed, forcePosition);
