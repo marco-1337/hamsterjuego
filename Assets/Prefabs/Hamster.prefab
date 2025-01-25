@@ -384,7 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec326ec5607aff429b95d5cf6b81263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 300
+  _strength: 200
+  _airStrength: 50
   _maxSpeed: 400
   _threshold: 1
 --- !u!114 &3225216054625463048
@@ -418,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _groundDetector: {fileID: 2254754156484803652}
   _UI_fuel: {fileID: 0}
-  _force: 500
+  _force: 1000
   _impulseTime: 1
   _isJumping: 0
   _haveFuel: 1
