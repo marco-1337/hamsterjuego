@@ -459,10 +459,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2613895302226261362, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: _force
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613895302226261362, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: _UI_fuel
       value: 
       objectReference: {fileID: 1191296594}
@@ -505,10 +501,6 @@ PrefabInstance:
     - target: {fileID: 4353853779084589468, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5258026655281922094, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: _airStrength
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6565184717736063383, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: m_Name
