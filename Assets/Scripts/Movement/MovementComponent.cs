@@ -22,6 +22,10 @@ public class MovementComponent : MonoBehaviour
     private Transform _transform;
     private SpriteRenderer _renderer;
     private GroundDetector _groundDetector;
+    private ConstantForce2D _constantForce;
+
+    private bool _isSticking = false;
+
     #endregion
 
     #region methods
@@ -54,19 +58,27 @@ public class MovementComponent : MonoBehaviour
         _transform = GetComponent<Transform>();
         _renderer = GetComponent<SpriteRenderer>();
         _groundDetector = GetComponent<GroundDetector>();
-
+        _constantForce = GetComponent<ConstantForce2D>();
     }
 
     void FixedUpdate()
     {
         if(_moveDir.x != 0)
         {
-            Vector2 forceDir = _groundDetector.SurfaceVector().Abs();
+            Vector2 forceDir = _constantForce.force.normalized;
+            (forceDir.x, forceDir.y) = (forceDir.y, forceDir.x);
+
+            forceDir.x *= -1;
+
+            forceDir = forceDir.Abs();
+
             Vector2 forcePosition = new Vector2(_transform.position.x, _transform.position.y + _renderer.size.y / 4);
-            if(forceDir != Vector2.zero) 
+            //if(forceDir != Vector2.zero || _isSticking) 
                 _rb.AddForceAtPosition(_moveDir * forceDir * _speed, forcePosition);
 
             _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -_maxSpeed, _maxSpeed), _rb.velocity.y); 
         }
     }
+
+    public void SetSticking(bool s) => _isSticking = s;
 }

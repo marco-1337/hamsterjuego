@@ -5,15 +5,33 @@ using UnityEngine;
 public class StickyComponent : MonoBehaviour
 {
 
-    void OnCollisionEnter2D(Collision2D other) {
+    void OnCollisionStay2D(Collision2D other) {
         
         MovementComponent janterMufmen = other.gameObject.GetComponent<MovementComponent>();
 
         if (janterMufmen != null)
         {
-            Rigidbody2D janterRigibodi = other.gameObject.GetComponent<Rigidbody2D>();
+            ConstantForce2D janterGraviti = other.gameObject.GetComponent<ConstantForce2D>();
 
-            
+            Debug.Log("AAAAA");
+
+            janterGraviti.force = other.contacts[0].normal * 400;
+
+            janterMufmen.SetSticking(true);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other) {
+        
+        MovementComponent janterMufmen = other.gameObject.GetComponent<MovementComponent>();
+
+        if (janterMufmen != null)
+        {
+            ConstantForce2D janterGraviti = other.gameObject.GetComponent<ConstantForce2D>();
+            Debug.Log("BBBBB");
+            janterGraviti.force = Vector2.down * 200;
+
+            janterMufmen.SetSticking(true);
         }
     }
 
