@@ -406,6 +406,7 @@ MonoBehaviour:
   _rocketInputActionReference: {fileID: -8966621013679035491, guid: 4f1624c6b06c34145b8ae69d3a6cd41d, type: 3}
   _movementComponent: {fileID: 5258026655281922094}
   _impulsor: {fileID: 2613895302226261362}
+  _constantForce: {fileID: 1762995398276342970}
 --- !u!114 &2613895302226261362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _groundDetector: {fileID: 2254754156484803652}
   _UI_fuel: {fileID: 0}
-  _force: 1000
+  _force: 600
   _impulseTime: 1
   _isJumping: 0
   _haveFuel: 1

@@ -10,6 +10,7 @@ public class StickyInputProvider : MonoBehaviour
 
     private void Awake()
     {
+        _sticky = GetComponent<StickyComponent>();
         _rocketInputActionReference.action.performed += OnRocketInputRecieved;
     }
 
@@ -28,5 +29,5 @@ public class StickyInputProvider : MonoBehaviour
         _rocketInputActionReference.action.performed -= OnRocketInputRecieved;
     }
 
-    private void OnRocketInputRecieved(InputAction.CallbackContext obj) => /*_sticky.Unstick();*/ Debug.Log("Borra esto");
+    private void OnRocketInputRecieved(InputAction.CallbackContext obj) => _sticky.Unstick();
 }
