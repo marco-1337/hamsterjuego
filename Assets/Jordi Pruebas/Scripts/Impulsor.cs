@@ -6,6 +6,9 @@ using UnityEngine;
 public class Impulsor : MonoBehaviour
 {
     [SerializeField]
+    private GroundDetector _groundDetector;
+
+    [SerializeField]
     float _force = 1;
     [SerializeField]
     float _impulseTime = 1.0f;
@@ -15,6 +18,7 @@ public class Impulsor : MonoBehaviour
     [SerializeField]
     bool _isJumping = false, _haveFuel = true;
     float _actualFuelTime = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,18 +39,13 @@ public class Impulsor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_isJumping && _haveFuel)
+        if (_isJumping && _haveFuel)
         {
             Impulse();
 
             _actualFuelTime += Time.deltaTime;
             _haveFuel = _impulseTime > _actualFuelTime;
         }
-        else if(!_haveFuel)
-        {
-            _isJumping = false;
-            _actualFuelTime = 0.0f;
-            _haveFuel = true;
-        }
+        if (_groundDetector.IsGrounded()) _actualFuelTime = .0f;
     }
 }
