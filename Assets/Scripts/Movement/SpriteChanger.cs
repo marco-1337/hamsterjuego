@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class SpriteChanger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Sprite _idle;
+    [SerializeField]
+    private Sprite _dizzy;
+    
+    private SpriteRenderer _renderer;
+    private MovementComponent _movement;
+
+    private void ChangeSprite(Sprite sprite)
     {
-        
+        _renderer.sprite = sprite;
     }
 
-    // Update is called once per frame
+
+    void Start()
+    {
+        _renderer = GetComponent<SpriteRenderer>();
+        _movement = GetComponent<MovementComponent>();
+    }
+
     void Update()
     {
-        
+        if(_renderer.sprite != _dizzy && _movement.IsMoving())
+            ChangeSprite(_dizzy);
+        else if(_renderer.sprite != _idle && !_movement.IsMoving())
+            ChangeSprite(_idle);
     }
 }
