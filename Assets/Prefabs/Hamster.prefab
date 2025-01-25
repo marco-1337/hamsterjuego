@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 3225216054625463048}
   - component: {fileID: 2613895302226261362}
   - component: {fileID: 2254754156484803652}
+  - component: {fileID: 1762995398276342970}
   m_Layer: 0
   m_Name: Hamster
   m_TagString: Untagged
@@ -271,8 +272,8 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 2
   m_AngularDrag: 2
-  m_GravityScale: 3
-  m_Material: {fileID: 0}
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 95e86a434d850d043a603cf06f0e0316, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -346,3 +347,14 @@ MonoBehaviour:
   distance: 1
   myCollider: {fileID: 6828639392878660936}
   rocketCollider: {fileID: 5455100579337723133}
+--- !u!247 &1762995398276342970
+ConstantForce2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565184717736063383}
+  m_Enabled: 1
+  m_Force: {x: 0, y: -200}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0
