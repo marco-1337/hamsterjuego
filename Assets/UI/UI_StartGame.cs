@@ -13,6 +13,7 @@ public class UI_StartGame : MonoBehaviour
 
     private void StartGameScene()
     {
-        SceneManager.LoadScene("PlayScene");
+        Debug.Log("A");
+        SceneManager.LoadScene("Cinematica");
     }
 }
