@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private Transform _targetTransform;
-    [SerializeField] private GroundDetector _groundDetector;
+    [SerializeField] private Transform _hamsterCenter; //El objeto center del hamster
+    [SerializeField] private GroundDetector _hamsterGroundDetector;
     [SerializeField] private float _verticalOffset;
 
     private float _previousVertcalTarget;
@@ -17,10 +17,10 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
-        if(_groundDetector.IsGrounded()) _previousVertcalTarget = _targetTransform.position.y;
+        if(_hamsterGroundDetector.IsGrounded()) _previousVertcalTarget = _hamsterCenter.position.y;
 
-        float horizontalTarget = _targetTransform.position.x;
+        float horizontalTarget = _hamsterCenter.position.x;
 
-        transform.position = Vector2.Lerp(transform.position, new Vector2(horizontalTarget, _previousVertcalTarget + _verticalOffset), Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(horizontalTarget, _previousVertcalTarget + _verticalOffset, -10), Time.deltaTime * 2);
     }
 }
