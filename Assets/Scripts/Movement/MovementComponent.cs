@@ -8,10 +8,13 @@ public class MovementComponent : MonoBehaviour
     #region properties
 
     [SerializeField]
-    private float _speed = 4.0f;
+    private float _speed = 200.0f;
 
     [SerializeField]
-    private float _maxSpeed = 10.0f;
+    private float _maxSpeed = 400.0f;
+
+    [SerializeField]
+    private float _threshold = 1.0f;
 
     private Vector2 _moveDir = Vector2.zero;
 
@@ -37,6 +40,11 @@ public class MovementComponent : MonoBehaviour
         if (_moveDir.x == -1.0)
             _moveDir.x = 0;
     }
+
+    public bool IsMoving()
+    {
+        return _rb.velocity.magnitude > _threshold;
+    }
     #endregion
 
 
@@ -57,6 +65,7 @@ public class MovementComponent : MonoBehaviour
             Vector2 forcePosition = new Vector2(_transform.position.x, _transform.position.y + _renderer.size.y / 4);
             if(forceDir != Vector2.zero) 
                 _rb.AddForceAtPosition(_moveDir * forceDir * _speed, forcePosition);
+
             _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -_maxSpeed, _maxSpeed), _rb.velocity.y); 
         }
     }
