@@ -5,7 +5,9 @@ using UnityEngine;
 public class GroundDetector : MonoBehaviour
 {
     [SerializeField] float distance = 0;
-    [SerializeField] Collider2D myCollider, rocketCollider;
+    [SerializeField] Collider2D myCollider;
+    [SerializeField] PolygonCollider2D rocketCollider;
+    
     public bool IsGrounded()
     {
         RaycastHit2D[] allTargets = Physics2D.RaycastAll(transform.position, Vector2.down, distance);
@@ -23,6 +25,7 @@ public class GroundDetector : MonoBehaviour
     {
         RaycastHit2D[] allTargets = Physics2D.RaycastAll(transform.position, Vector2.down, distance);
         int i = 0;
+
         while (i < allTargets.Length)
         {
             if (allTargets[i].collider != myCollider && allTargets[i].collider != rocketCollider)
@@ -31,6 +34,7 @@ public class GroundDetector : MonoBehaviour
             }
             ++i;
         }
+
         return Vector2.zero;
     }
 
