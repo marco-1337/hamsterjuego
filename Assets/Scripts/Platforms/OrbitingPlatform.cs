@@ -16,12 +16,16 @@ public class OrbitingPlatform : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(_direction);
         transform.position = ((Vector2)transform.position + (_direction * _speed * Time.deltaTime));
     }
 
     private IEnumerator FloatingCoroutine()
     {
-        yield return new WaitForSeconds(_timeForShift);
-        _direction = -_direction; 
+        while(true)
+        {
+            yield return new WaitForSeconds(_timeForShift);
+            _direction.y = -_direction.y; 
+        }
     }
 }

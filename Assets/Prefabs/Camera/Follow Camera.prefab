@@ -106,5 +106,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hamsterCenter: {fileID: 0}
-  _hamsterGroundDetector: {fileID: 0}
-  _verticalOffset: 2.5
+  _verticalOffset: 1.5

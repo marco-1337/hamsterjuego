@@ -12,12 +12,14 @@ public class HamsterInputProvider : MonoBehaviour
 
     [SerializeField] private MovementComponent _movementComponent;
     [SerializeField] private Impulsor _impulsor;
+    [SerializeField] private ConstantForce2D _constantForce;
 
     private void Awake()
     {
         //Buscar componentes
         _movementComponent = GetComponent<MovementComponent>();
         _impulsor = GetComponent<Impulsor>();
+        _constantForce = GetComponent<ConstantForce2D>();
 
         //Procesar input
         _moveLeftInputActionReference.action.performed += OnLeftInputRecieved;
@@ -62,7 +64,13 @@ public class HamsterInputProvider : MonoBehaviour
     private void OnLeftInputRecieved(InputAction.CallbackContext obj) => SetPlayerDirection(new Vector2(-1, 0));
     private void OnRightInputRecieved(InputAction.CallbackContext obj) => SetPlayerDirection(new Vector2(1, 0));
 
-    private void OnRocketInputRecieved(InputAction.CallbackContext obj) => _impulsor.SetImpulse(true);
+    private void OnRocketInputRecieved(InputAction.CallbackContext obj) 
+    { 
+        _constantForce.force = Vector2.down * 300;
+        _movementComponent.SetSticking(false);
+
+        _impulsor.SetImpulse(true);
+    }
 
     //Soltar
     private void OnLeftInputReleased(InputAction.CallbackContext obj) => _movementComponent.LeftKeyReleased();

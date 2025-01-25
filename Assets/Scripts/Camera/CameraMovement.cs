@@ -12,6 +12,10 @@ public class CameraMovement : MonoBehaviour
         float verticalTarget = _hamsterCenter.position.y;
         float horizontalTarget = _hamsterCenter.position.x;
 
-        transform.position = Vector3.Lerp(transform.position, new Vector3(horizontalTarget,verticalTarget + _verticalOffset, -10), Time.deltaTime * 2);
+        transform.position = 
+            Vector3.Lerp(
+                transform.position, 
+                new Vector3(horizontalTarget,verticalTarget + _verticalOffset, -10), 
+                Time.deltaTime * 4);
     }
 }

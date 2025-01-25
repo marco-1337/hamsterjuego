@@ -14,12 +14,17 @@ public class BouncingComponent : MonoBehaviour
         
         MovementComponent janterMufmen = other.gameObject.GetComponent<MovementComponent>();
 
+        MovementComponent mufmenParen = other.gameObject.GetComponentInParent<MovementComponent>();
+
         if (janterMufmen != null)
         {
             Rigidbody2D janterRigibodi = other.gameObject.GetComponent<Rigidbody2D>();
 
-            Debug.Log(other.contacts[0].normal*-10000*_potensia);
-            Debug.DrawRay(other.contacts[0].point, other.contacts[0].normal*-1, Color.green, 10f);
+            janterRigibodi.AddForce(other.contacts[0].normal*-10000*_potensia);
+        }
+        else if (mufmenParen != null)
+        {
+            Rigidbody2D janterRigibodi = other.gameObject.GetComponentInParent<Rigidbody2D>();
 
             janterRigibodi.AddForce(other.contacts[0].normal*-10000*_potensia);
         }
