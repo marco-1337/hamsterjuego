@@ -72,7 +72,7 @@ public class MovementComponent : MonoBehaviour
 
             forceDir.y *= -1;
 
-            forceDir = forceDir.Abs();
+            forceDir = new Vector2(Mathf.Abs(forceDir.x), Mathf.Abs(forceDir.y));
 
             Vector2 forcePosition = new Vector2(_transform.position.x, _transform.position.y + _renderer.size.y / 4);
             //if(forceDir != Vector2.zero || _isSticking) 
