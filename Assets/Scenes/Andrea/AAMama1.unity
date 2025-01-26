@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5322372403820056711, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
+      propertyPath: _hamsterCenter
+      value: 
+      objectReference: {fileID: 1906230850}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -426,6 +430,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1906230850 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 859980628521956744, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
+  m_PrefabInstance: {fileID: 8339243164604894856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8339243164604894856
 PrefabInstance:
   m_ObjectHideFlags: 0

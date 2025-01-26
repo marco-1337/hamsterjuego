@@ -22,7 +22,7 @@ public class UI_Fuel : MonoBehaviour
     }
     public void Overheated(bool a)
     {
-        Debug.Log("b");
+        //Debug.Log("b");
         _overheatIndicator.SetActive(a);
         
     }

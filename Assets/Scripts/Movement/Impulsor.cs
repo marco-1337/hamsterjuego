@@ -44,21 +44,23 @@ public class Impulsor : MonoBehaviour
         if(_fuegote.activeSelf != isPropelling)
             _fuegote.SetActive(isPropelling);
     }
-    // Update is called once per frame
-    void Update()
+
+
+    private void FixedUpdate()
     {
         if (_isJumping && _haveFuel)
         {
-            _actualFuelTime += Time.deltaTime;
+            Impulse();
+
+            _actualFuelTime += Time.fixedDeltaTime;
             _haveFuel = _impulseTime > _actualFuelTime;
-            if(_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+            if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
 
             EnableFire(true);
         }
         else if (!_haveFuel)
         {
             if (_UI_fuel != null) _UI_fuel.Overheated(true);
-            EnableFire(false);
         }
         if (_groundDetector.IsGrounded())
         {
@@ -66,15 +68,8 @@ public class Impulsor : MonoBehaviour
             _haveFuel = true;
             if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
             if (_UI_fuel != null) _UI_fuel.Overheated(false);
-
+        }
+        if (!_haveFuel || !_isJumping)
             EnableFire(false);
-        }
-    }
-    private void FixedUpdate()
-    {
-        if (_isJumping && _haveFuel)
-        {
-            Impulse();
-        }
     }
 }

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 41e658808f0bf0d4896fe3c4a09ca619
+  - enabled: 1
+    path: Assets/Scenes/Cinematica.unity
+    guid: 9f4cc163deeadce489bc4491fae11bef
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 40060112145afff4db6f5dd9af068fbf
   m_configObjects: {}

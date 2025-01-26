@@ -550,7 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1.3
   myCollider: {fileID: 6828639392878660936}
-  rocketCollider: {fileID: 0}
+  rocketCollider: {fileID: 5324005463113596022}
 --- !u!247 &1762995398276342970
 ConstantForce2D:
   m_ObjectHideFlags: 0
