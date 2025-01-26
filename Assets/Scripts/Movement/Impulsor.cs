@@ -47,34 +47,56 @@ public class Impulsor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isJumping && _haveFuel)
-        {
-            _actualFuelTime += Time.deltaTime;
-            _haveFuel = _impulseTime > _actualFuelTime;
-            if(_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+        //if (_isJumping && _haveFuel)
+        //{
+        //    Debug.Log($"{_actualFuelTime}, {_impulseTime}");
+        //    _actualFuelTime += Time.deltaTime;
+        //    //Debug.Log(_actualFuelTime);
+        //    _haveFuel = _impulseTime > _actualFuelTime;
+        //    if(_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
 
-            EnableFire(true);
-        }
-        else if (!_haveFuel)
-        {
-            if (_UI_fuel != null) _UI_fuel.Overheated(true);
-            EnableFire(false);
-        }
-        if (_groundDetector.IsGrounded())
-        {
-            _actualFuelTime = .0f;
-            _haveFuel = true;
-            if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
-            if (_UI_fuel != null) _UI_fuel.Overheated(false);
-
-            EnableFire(false);
-        }
+        //    EnableFire(true);
+        //}
+        //else if (!_haveFuel)
+        //{
+        //    if (_UI_fuel != null) _UI_fuel.Overheated(true);
+        //}
+        //if (_groundDetector.IsGrounded())
+        //{
+        //    Debug.Log(_actualFuelTime);
+        //    _actualFuelTime = .0f;
+        //    _haveFuel = true;
+        //    if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+        //    if (_UI_fuel != null) _UI_fuel.Overheated(false);
+        //}
+        //if(!_haveFuel || !_isJumping)
+        //    EnableFire(false);
     }
     private void FixedUpdate()
     {
         if (_isJumping && _haveFuel)
         {
             Impulse();
+
+            _actualFuelTime += Time.fixedDeltaTime;
+            _haveFuel = _impulseTime > _actualFuelTime;
+            if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+
+            EnableFire(true);
         }
+        else if (!_haveFuel)
+        {
+            if (_UI_fuel != null) _UI_fuel.Overheated(true);
+        }
+        if (_groundDetector.IsGrounded())
+        {
+            Debug.Log("grounded");
+            _actualFuelTime = .0f;
+            _haveFuel = true;
+            if (_UI_fuel != null) _UI_fuel.SetFuelBar(_actualFuelTime);
+            if (_UI_fuel != null) _UI_fuel.Overheated(false);
+        }
+        if (!_haveFuel || !_isJumping)
+            EnableFire(false);
     }
 }

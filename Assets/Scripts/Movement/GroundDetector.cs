@@ -15,7 +15,8 @@ public class GroundDetector : MonoBehaviour
         bool grounded = false;
         while(i < allTargets.Length && !grounded)
         {
-            if(allTargets[i].collider != myCollider && allTargets[i].collider != rocketCollider) grounded = true;
+            if(allTargets[i].collider != myCollider && 
+                allTargets[i].collider != rocketCollider) grounded = true;
             ++i;
         }
         return grounded;
@@ -40,6 +41,6 @@ public class GroundDetector : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        //Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
+        Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
     }
 }
