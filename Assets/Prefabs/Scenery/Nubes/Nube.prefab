@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7843910650617976642}
   - component: {fileID: 5136541825697582802}
   - component: {fileID: 7825864702206032855}
+  - component: {fileID: 8560394563488372677}
+  - component: {fileID: 1428111290466741492}
   m_Layer: 0
   m_Name: Nube
   m_TagString: Untagged
@@ -134,3 +136,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _potensia: 1
+--- !u!95 &8560394563488372677
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498354957975833131}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea572d48830158543a645c67e916aff4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1428111290466741492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498354957975833131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886890c0796f173498008c92dc125d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 8560394563488372677}
