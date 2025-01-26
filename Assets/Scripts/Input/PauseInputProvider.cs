@@ -29,4 +29,5 @@ public class PauseInputProvider : MonoBehaviour
     }
 
     private void OnPauseInputDetected(InputAction.CallbackContext obj) => _pauser.Pause();
+
 }
