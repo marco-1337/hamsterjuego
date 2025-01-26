@@ -1,0 +1,67 @@
+{
+    "name": "CameraInputMap",
+    "maps": [
+        {
+            "name": "Move",
+            "id": "177b98db-3d25-4851-8b96-aa0173afcbf3",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "80de3135-91aa-4769-abe9-f94c8e1a17f1",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "0c87ef48-9ecc-4b42-8b5a-75b08e5f7537",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "0b3ed77b-c883-400a-86c9-5e4a8a7be385",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "f66478d4-5b46-4cf5-8e25-24f7e14d716e",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "19d66695-ed98-4dcb-a74b-aa8e540fcc32",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

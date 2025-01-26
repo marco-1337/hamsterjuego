@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4980178896202043440}
   - component: {fileID: 8742488928506561512}
   - component: {fileID: 5322372403820056711}
+  - component: {fileID: 8220642575295829337}
+  - component: {fileID: 8047750107671414321}
   m_Layer: 0
   m_Name: Follow Camera
   m_TagString: MainCamera
@@ -107,3 +109,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hamsterCenter: {fileID: 0}
   _verticalOffset: 1.5
+--- !u!114 &8220642575295829337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28265805877614416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d821a197c5c73744781fe913f3d39ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _playerCenter: {fileID: 0}
+  _maxDistance: 5
+--- !u!114 &8047750107671414321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28265805877614416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728e8170c8c68b43946cfcb9179c817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraFollow: {fileID: 5322372403820056711}
+  _cameraMove: {fileID: 8220642575295829337}
+  _cameraInputActionReference: {fileID: -6093716996786223594, guid: cfda04a7cc0ae68458b433ea341fe01a, type: 3}

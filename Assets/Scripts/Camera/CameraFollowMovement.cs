@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
+public class CameraFollowMovement : MonoBehaviour
 {
     [SerializeField] private Transform _hamsterCenter; //El objeto center del hamster
     [SerializeField] private float _verticalOffset;
