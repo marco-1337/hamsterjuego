@@ -34,8 +34,10 @@ public class CameraMoveOnInput : MonoBehaviour
 
             if (transform.position.y > _playerCenter.transform.position.y + _maxDistance) 
                 transform.position = new Vector3(transform.position.x, _playerCenter.transform.position.y + _maxDistance, -7);
+            else if (transform.position.y < _playerCenter.transform.position.y - _maxDistance)
+                transform.position = new Vector3(transform.position.x, _playerCenter.transform.position.y - _maxDistance, - 7);
 
-            if(transform.position.x > _playerCenter.transform.position.x + _maxDistance)
+            if (transform.position.x > _playerCenter.transform.position.x + _maxDistance)
                 transform.position = new Vector3(_playerCenter.transform.position.x + _maxDistance, transform.position.y, -7);
             else if(transform.position.x < _playerCenter.transform.position.x - _maxDistance)
                 transform.position = new Vector3(_playerCenter.transform.position.x - _maxDistance, transform.position.y, -7);

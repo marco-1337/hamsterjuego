@@ -250,16 +250,14 @@ PrefabInstance:
       propertyPath: _hamsterCenter
       value: 
       objectReference: {fileID: 421581086}
+    - target: {fileID: 8220642575295829337, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
+      propertyPath: _playerCenter
+      value: 
+      objectReference: {fileID: 421581085}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 28265805877614416, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2002701131}
-    - targetCorrespondingSourceObject: {fileID: 28265805877614416, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2002701130}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
 --- !u!1 &1948034331
 GameObject:
@@ -391,52 +389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2002701129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 28265805877614416, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
-  m_PrefabInstance: {fileID: 780671932}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2002701130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002701129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f728e8170c8c68b43946cfcb9179c817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cameraFollow: {fileID: 2002701132}
-  _cameraMove: {fileID: 2002701131}
-  _cameraInputActionReference: {fileID: -6093716996786223594, guid: cfda04a7cc0ae68458b433ea341fe01a, type: 3}
---- !u!114 &2002701131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002701129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d821a197c5c73744781fe913f3d39ffb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 2
-  _playerCenter: {fileID: 421581085}
-  _maxDistance: 5
---- !u!114 &2002701132 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5322372403820056711, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
-  m_PrefabInstance: {fileID: 780671932}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002701129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918de9b8779292c4f9a61f83e6e61cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2949696670596068397
 PrefabInstance:
   m_ObjectHideFlags: 0

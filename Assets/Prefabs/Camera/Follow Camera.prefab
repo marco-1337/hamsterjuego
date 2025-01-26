@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _playerCenter: {fileID: 0}
-  _maxDistance: 5
+  _maxDistance: 10
 --- !u!114 &8047750107671414321
 MonoBehaviour:
   m_ObjectHideFlags: 0

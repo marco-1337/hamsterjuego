@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _strength: 200
-  _airStrength: 50
+  _airStrength: 100
   _maxSpeed: 400
   _threshold: 1
 --- !u!114 &3225216054625463048

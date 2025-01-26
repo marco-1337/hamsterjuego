@@ -168,9 +168,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagesOfCinematic:
-  - {fileID: 21300000, guid: 3fc703812fd6d3d4988817a6571194e6, type: 3}
-  - {fileID: 21300000, guid: 5676921ce7194f243bf9b2bd9474ad12, type: 3}
-  timeOfImage: 1
+  - {fileID: 21300000, guid: 9f0af15c5f82e754290358cfa89eb7e5, type: 3}
+  - {fileID: 21300000, guid: 16fcbdf91559a7f4c944b80a5066a31d, type: 3}
+  - {fileID: 21300000, guid: 8d48916b6cf98384caa52607d6a6bb8d, type: 3}
+  - {fileID: 21300000, guid: af739a08ac198be42a92cfa63682f4b1, type: 3}
+  - {fileID: 21300000, guid: 1c2be70bcdc941143a14b041d7631d85, type: 3}
+  - {fileID: 21300000, guid: 186947eada530d04f904526b8640c33e, type: 3}
+  - {fileID: 21300000, guid: b120b4243fc6e59438eaf197d96b2085, type: 3}
+  - {fileID: 21300000, guid: 4e3debaa27b3e3941837cae78da7cc1e, type: 3}
+  - {fileID: 21300000, guid: ee8b15323fbbbca449afd68e86f23d42, type: 3}
+  - {fileID: 21300000, guid: 73b91f8dd837a2e47b01044b84246d85, type: 3}
+  - {fileID: 21300000, guid: 1ce0c78b0ca47bb4091568ffb80c7a6d, type: 3}
+  - {fileID: 21300000, guid: 860f42b4e1b2bc240b726c85cf19c202, type: 3}
+  - {fileID: 21300000, guid: cbdb906e7fb2a794db645aecd8851e94, type: 3}
+  - {fileID: 21300000, guid: d0c96dcd36103ff4a8907063396e48cd, type: 3}
+  - {fileID: 21300000, guid: 11221c503c084624fb8ed34cba9a2783, type: 3}
+  - {fileID: 21300000, guid: 00c25b4738d9e934296eb27f901fd8aa, type: 3}
+  - {fileID: 21300000, guid: 894b42247187119469fc097753aad718, type: 3}
+  - {fileID: 21300000, guid: b1638b140f400724888c46b27f091a09, type: 3}
+  - {fileID: 21300000, guid: 764b0dada0a8e24499707ad54a4c8cf3, type: 3}
+  - {fileID: 21300000, guid: 8077555279d4c5d4aa61fc9ceecb8bef, type: 3}
+  - {fileID: 21300000, guid: c2b2da345e533884dac131709c9743f3, type: 3}
+  - {fileID: 21300000, guid: 1389ffb7f7e136344b8f1b555df85c7b, type: 3}
+  - {fileID: 21300000, guid: 1820ae6f0f98ee74fade742621558791, type: 3}
+  - {fileID: 21300000, guid: 103588473c1021f4b8af38591f6381e7, type: 3}
+  timeOfImage: 1.3
   image: {fileID: 2094816172}
 --- !u!1 &583367801
 GameObject:
@@ -469,7 +491,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 373.06006, y: 287}
+  m_SizeDelta: {x: 960, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094816172
 MonoBehaviour:
