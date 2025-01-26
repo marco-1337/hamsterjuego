@@ -41,6 +41,6 @@ public class GroundDetector : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
+        //Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
     }
 }
