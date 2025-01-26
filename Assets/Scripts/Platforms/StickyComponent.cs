@@ -17,19 +17,18 @@ public class StickyComponent : MonoBehaviour
         {
             if (janterMufmen != null)
             {
-                Debug.Log(other.transform.up.normalized);
+                Debug.Log(transform.up.normalized);
                 ConstantForce2D janterGraviti = other.GetComponent<ConstantForce2D>();
 
-                janterGraviti.force = other.transform.up.normalized * 300;
+                janterGraviti.force = transform.up.normalized * 300;
 
                 janterMufmen.SetSticking(true);
             }
             else if (mufmenParen != null)
             {
-                Debug.Log(other.transform.up.normalized);
                 ConstantForce2D janterGraviti = other.GetComponentInParent<ConstantForce2D>();
 
-                janterGraviti.force = other.transform.up.normalized * 300;
+                janterGraviti.force = transform.up.normalized * 300;
 
                 mufmenParen.SetSticking(true);
             }

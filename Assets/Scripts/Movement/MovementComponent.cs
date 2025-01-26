@@ -76,10 +76,8 @@ public class MovementComponent : MonoBehaviour
 
             Vector2 forcePosition = new Vector2(_transform.position.x, _transform.position.y + _renderer.size.y / 4);
             //if(forceDir != Vector2.zero || _isSticking) 
-            if(_groundDetector.IsGrounded())
+            if(_groundDetector.IsGrounded() || _isSticking)
                 _rb.AddForceAtPosition(_moveDir.x * forceDir * _strength, forcePosition);
-            else if(_isSticking)
-                _rb.AddForceAtPosition(_moveDir.x * forceDir * _strength * 4, forcePosition);
             else _rb.AddForceAtPosition(_moveDir.x * forceDir * _airStrength, forcePosition);
 
             _rb.velocity = new Vector2(Mathf.Clamp(_rb.velocity.x, -_maxSpeed, _maxSpeed), _rb.velocity.y); 

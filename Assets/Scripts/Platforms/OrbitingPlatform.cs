@@ -16,7 +16,6 @@ public class OrbitingPlatform : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_direction);
         transform.position = ((Vector2)transform.position + (_direction * _speed * Time.deltaTime));
     }
 
