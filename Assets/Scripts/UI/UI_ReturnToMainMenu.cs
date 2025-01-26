@@ -9,6 +9,7 @@ public class UI_ReturnToMainMenu : MonoBehaviour
     [SerializeField]private Guardado guardado;
     [SerializeField] private Pipas pipas;
     [SerializeField] private GameObject player;
+    [SerializeField] private string scene = "MainMenu";
 
     [SerializeField] bool _exitFromWin;
     private void Start()
@@ -19,7 +20,7 @@ public class UI_ReturnToMainMenu : MonoBehaviour
     private void ChangeToMainMenu()
     {
         SaveGame();
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(scene);
     }
 
     private void SaveGame()
