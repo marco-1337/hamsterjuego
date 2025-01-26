@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,10 +11,11 @@ public class CinematicManager : MonoBehaviour
     [SerializeField] private Sprite[] imagesOfCinematic;
     [SerializeField] private float timeOfImage = 1;
     [SerializeField] private Image image;
-
+    [SerializeField] private UnityEvent startMusic, stopMusic;
     private void Start()
     {
         StartCoroutine(Cinematic());
+        startMusic.Invoke();
     }
 
     private IEnumerator Cinematic()
@@ -24,7 +26,7 @@ public class CinematicManager : MonoBehaviour
             image.sprite = imagesOfCinematic[i];
             yield return new WaitForSeconds(timeOfImage);
         }
-
+        stopMusic.Invoke();
         SceneManager.LoadScene("MainScene");
     }
 }
