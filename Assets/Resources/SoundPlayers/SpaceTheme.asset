@@ -16,6 +16,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f8033114d395dbd4ea71711c6b26a572, type: 3}
   volume: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
+  _fadeInTime: 0
+  _fadeOutTime: 0
   playIndex: 0
   playOrder: 0
-  _loop: 0
+  _loop: 1
