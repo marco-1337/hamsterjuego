@@ -61,7 +61,7 @@ public class StickyComponent : MonoBehaviour
 
             _stick = true;
 
-            janterMufmen.SetSticking(false);
+            mufmenParen.SetSticking(false);
         }
     }
 

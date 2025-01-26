@@ -26,7 +26,6 @@ public class MovimientoCamaraInicial : MonoBehaviour
 
             while ((posCam - recorrido[i]).magnitude > 3)
             {
-                Debug.Log((posCam - recorrido[i]).magnitude);
                 Vector2 dir = (recorrido[i] - posCam).normalized;
                 cam.transform.parent.position += new Vector3(dir.x, dir.y, 0) * speed * Time.deltaTime;
                 posCam = new Vector2(cam.transform.parent.position.x, cam.transform.parent.position.y);

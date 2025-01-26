@@ -7,6 +7,8 @@ public class GroundDetector : MonoBehaviour
     [SerializeField] float distance = 0;
     [SerializeField] Collider2D myCollider;
     [SerializeField] PolygonCollider2D rocketCollider;
+
+    [SerializeField] Collider2D music1, music2, music3;
     
     public bool IsGrounded()
     {
@@ -15,8 +17,11 @@ public class GroundDetector : MonoBehaviour
         bool grounded = false;
         while(i < allTargets.Length && !grounded)
         {
-            if(allTargets[i].collider != myCollider && 
-                allTargets[i].collider != rocketCollider) grounded = true;
+            if(allTargets[i].collider != myCollider 
+                && allTargets[i].collider != rocketCollider
+                && allTargets[i].collider != music1
+                && allTargets[i].collider != music3
+                && allTargets[i].collider != music2) grounded = true;
             ++i;
         }
         return grounded;
@@ -29,7 +34,11 @@ public class GroundDetector : MonoBehaviour
 
         while (i < allTargets.Length)
         {
-            if (allTargets[i].collider != myCollider && allTargets[i].collider != rocketCollider)
+            if (allTargets[i].collider != myCollider 
+                && allTargets[i].collider != rocketCollider
+                && allTargets[i].collider != music1
+                && allTargets[i].collider != music3
+                && allTargets[i].collider != music2)
             {
                 return allTargets[i].collider.GetComponent<Transform>().right;
             }
@@ -41,6 +50,6 @@ public class GroundDetector : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        //Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
+        Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
     }
 }
