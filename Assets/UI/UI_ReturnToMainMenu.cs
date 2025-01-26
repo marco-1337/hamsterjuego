@@ -9,6 +9,8 @@ public class UI_ReturnToMainMenu : MonoBehaviour
     [SerializeField]private Guardado guardado;
     [SerializeField] private Pipas pipas;
     [SerializeField] private GameObject player;
+
+    [SerializeField] bool _exitFromWin;
     private void Start()
     {
         GetComponent<Button>().onClick.AddListener(ChangeToMainMenu);
@@ -22,6 +24,8 @@ public class UI_ReturnToMainMenu : MonoBehaviour
 
     private void SaveGame()
     {
+        if (_exitFromWin) player.transform.position = new Vector3(-1.6f, -1.7f, -1f);
+        
         guardado._savedPlayerTransform = player.transform;
         guardado._savedPipas = pipas.numPipas;
     }
