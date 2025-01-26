@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2367298797680150038, guid: acca0342317e4484a99acce2ec19a9e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.79
+      objectReference: {fileID: 0}
     - target: {fileID: 2555940056873351324, guid: acca0342317e4484a99acce2ec19a9e3, type: 3}
       propertyPath: recorrido.Array.data[0].y
       value: 10

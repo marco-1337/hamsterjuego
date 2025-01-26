@@ -33,7 +33,7 @@ public class MovimientoCamaraInicial : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
-        player.SetActive(false);
+        player.SetActive(true);
         cam.enabled = false;
     }
 }
