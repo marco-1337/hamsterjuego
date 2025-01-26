@@ -7,8 +7,8 @@ public class StickyComponent : MonoBehaviour
 
     private bool _stick = true;
 
-    void OnCollisionStay2D(Collision2D other) {
-        
+    void OnTriggerStay2D(Collider2D other) {
+
         MovementComponent janterMufmen = other.gameObject.GetComponent<MovementComponent>();
 
         MovementComponent mufmenParen = other.gameObject.GetComponentInParent<MovementComponent>();
@@ -17,17 +17,19 @@ public class StickyComponent : MonoBehaviour
         {
             if (janterMufmen != null)
             {
-                ConstantForce2D janterGraviti = other.gameObject.GetComponent<ConstantForce2D>();
+                Debug.Log(other.transform.up.normalized);
+                ConstantForce2D janterGraviti = other.GetComponent<ConstantForce2D>();
 
-                janterGraviti.force = other.contacts[0].normal * 900;
+                janterGraviti.force = other.transform.up.normalized * 300;
 
                 janterMufmen.SetSticking(true);
             }
             else if (mufmenParen != null)
             {
-                ConstantForce2D janterGraviti = other.gameObject.GetComponentInParent<ConstantForce2D>();
+                Debug.Log(other.transform.up.normalized);
+                ConstantForce2D janterGraviti = other.GetComponentInParent<ConstantForce2D>();
 
-                janterGraviti.force = other.contacts[0].normal * 900;
+                janterGraviti.force = other.transform.up.normalized * 300;
 
                 mufmenParen.SetSticking(true);
             }
@@ -35,7 +37,7 @@ public class StickyComponent : MonoBehaviour
     }
 
     
-    void OnCollisionExit2D(Collision2D other) {
+    void OnTriggerExit2D(Collider2D other) {
         
         MovementComponent janterMufmen = other.gameObject.GetComponent<MovementComponent>();
 
