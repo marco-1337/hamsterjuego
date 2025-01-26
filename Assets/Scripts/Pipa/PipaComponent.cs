@@ -5,11 +5,11 @@ using UnityEngine;
 public class PipaComponent : MonoBehaviour
 {
     [SerializeField] Pipas contadorPipas;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<MovementComponent>() != null)
         {
-            //te xocas con jugado
+            //te chocas con jugador
             contadorPipas.numPipas++;
             Destroy(gameObject);
         }

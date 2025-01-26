@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: moco_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1100
+        width: 780
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323460718ac03e44587f0d629eec5d6d
+      internalID: -1195975673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moco_1
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 1239
+        width: 132
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c47a1a2febeda46b1b9273b7724027
+      internalID: -1936088859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moco_2
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 1216
+        width: 298
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32f4d9d57817f84fa1262499d4c1d55
+      internalID: 1247849588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moco_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 695
+        width: 497
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3da5c0fd3a448b45bf6abd6bfa8b77d
+      internalID: -759628461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moco_4
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 715
+        width: 371
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689b59e61b20363489d1f4359fdfd4d8
+      internalID: -1511766762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moco_5
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 699
+        width: 242
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710364374177b0b42a39b41c8c2dd179
+      internalID: -1779560171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moco_6
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 146
+        width: 290
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e739053988b33874d81af9c38ffadbda
+      internalID: 76836007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      moco_0: 1979724432
+      moco_1: 504139797
+      moco_2: -1195975673
+      moco_3: -1936088859
+      moco_4: 1247849588
+      moco_5: -759628461
+      moco_6: -1511766762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
