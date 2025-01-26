@@ -18,7 +18,7 @@ public class MovimientoCamaraInicial : MonoBehaviour
 
     private IEnumerator MovimientoCam()
     {
-        //player.GetComponent<MovementComponent>().enabled = false;
+        player.SetActive(false);
 
         for (int i = 0; i < recorrido.Length; i++)
         {
@@ -33,7 +33,7 @@ public class MovimientoCamaraInicial : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
-        //player.GetComponent<MovementComponent>().enabled = true;
+        player.SetActive(false);
         cam.enabled = false;
     }
 }
