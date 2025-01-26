@@ -29,10 +29,10 @@ public class AudioPerformer : MonoBehaviour
                 AudioSource currentSource = gameObject.AddComponent<AudioSource>();
 
                 _audioPlayer[i].OnAudioOneShotPlay.
-                AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
+                AddListener((AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop) =>
                 {
-                    if (currentSource.volume != volume) currentSource.volume = volume;
-                    if (currentSource.pitch != pitch) currentSource.pitch = pitch;
+                    if (currentSource.volume != volume_pitch.volume) currentSource.volume = volume_pitch.volume;
+                    if (currentSource.pitch != volume_pitch.pitch) currentSource.pitch = volume_pitch.pitch;
                     if (currentSource.clip != clip) currentSource.clip = clip;
                     if (currentSource.loop != loop) currentSource.loop = loop;
 
@@ -41,10 +41,10 @@ public class AudioPerformer : MonoBehaviour
                 );
 
                 _audioPlayer[i].OnAudioPlay.
-                AddListener((AudioClip clip, float volume, float pitch, bool loop) =>
+                AddListener((AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop) =>
                 {
-                    if (currentSource.volume != volume) currentSource.volume = volume;
-                    if (currentSource.pitch != pitch) currentSource.pitch = pitch;
+                    if (currentSource.volume != volume_pitch.volume) currentSource.volume = volume_pitch.volume;
+                    if (currentSource.pitch != volume_pitch.pitch) currentSource.pitch = volume_pitch.pitch;
                     if (currentSource.clip != clip) currentSource.clip = clip;
                     if (currentSource.loop != loop) currentSource.loop = loop;
 

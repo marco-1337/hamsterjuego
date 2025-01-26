@@ -18,15 +18,16 @@ public class AudioPlayer : ScriptableObject
     public AudioClip[] clips;
     public Vector2 volume = new Vector2(1f, 1f);
     public Vector2 pitch = new Vector2(1f, 1f);
+    [SerializeField] private float _fadeInTime = 0.0f, _fadeOutTime = 0.0f;
     [SerializeField] int playIndex;
     [SerializeField] private SoundClipOrder playOrder;
     [SerializeField] private bool _loop;
 
-    private UnityEvent<AudioClip, float, float, bool> _onAudioOnShotPlay = new UnityEvent<AudioClip, float, float, bool>();
-    public UnityEvent<AudioClip, float, float, bool> OnAudioOneShotPlay => _onAudioOnShotPlay;
+    private UnityEvent<AudioClip, (float, float), (float, float), bool> _onAudioOnShotPlay = new UnityEvent<AudioClip, (float, float),  (float, float), bool>();
+    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnAudioOneShotPlay => _onAudioOnShotPlay;
 
-    private UnityEvent<AudioClip, float, float, bool> _onAudioPlay = new UnityEvent<AudioClip, float, float, bool>();
-    public UnityEvent<AudioClip, float, float, bool> OnAudioPlay => _onAudioPlay;
+    private UnityEvent<AudioClip, (float, float), (float, float), bool> _onAudioPlay = new UnityEvent<AudioClip, (float, float), (float, float), bool>();
+    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnAudioPlay => _onAudioPlay; 
 
     private UnityEvent onAudioStop = new UnityEvent();
     public UnityEvent OnAudioStop => onAudioStop;
@@ -66,7 +67,7 @@ public class AudioPlayer : ScriptableObject
         float actualVolume = Random.Range(volume.x, volume.y);
         float actualPitch = Random.Range(pitch.x, pitch.y);
 
-        _onAudioOnShotPlay?.Invoke(audioClip(), actualVolume, actualPitch, _loop);
+        _onAudioOnShotPlay?.Invoke(audioClip(), (actualVolume, actualPitch), (_fadeInTime,_fadeOutTime), _loop);
     }
 
     public void Play()
@@ -79,10 +80,11 @@ public class AudioPlayer : ScriptableObject
         float actualVolume = Random.Range(volume.x, volume.y);
         float actualPitch = Random.Range(pitch.x, pitch.y);
 
-        _onAudioPlay?.Invoke(audioClip(), actualVolume, actualPitch, _loop);
+        _onAudioPlay?.Invoke(audioClip(), (actualVolume, actualPitch), (_fadeInTime, _fadeOutTime), _loop);
     }
 
     public void Stop() => onAudioStop?.Invoke();
+
 
     enum SoundClipOrder
     {
