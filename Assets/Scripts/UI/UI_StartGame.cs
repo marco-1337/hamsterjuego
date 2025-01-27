@@ -16,7 +16,7 @@ public class UI_StartGame : MonoBehaviour
 
     private void StartGameScene()
     {
-        Debug.Log("A");
+        //Debug.Log("A");
         SceneManager.LoadScene("Cinematica");
     }
 }

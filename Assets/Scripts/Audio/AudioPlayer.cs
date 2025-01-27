@@ -23,6 +23,9 @@ public class AudioPlayer : ScriptableObject
     [SerializeField] private SoundClipOrder playOrder;
     [SerializeField] private bool _loop;
 
+    private UnityEvent<AudioClip, (float, float), (float, float), bool> _onLoadMuic = new UnityEvent<AudioClip, (float, float),  (float, float), bool>();
+    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnLoadMusic => _onLoadMuic;
+
     private UnityEvent<AudioClip, (float, float), (float, float), bool> _onAudioOnShotPlay = new UnityEvent<AudioClip, (float, float),  (float, float), bool>();
     public UnityEvent<AudioClip, (float, float), (float, float), bool> OnAudioOneShotPlay => _onAudioOnShotPlay;
 
@@ -57,6 +60,18 @@ public class AudioPlayer : ScriptableObject
         return clip;
     }
 
+    public void LoadMuisic()
+    {
+        if (clips.Length == 0)  //por si acaso falta una pista de audio
+        {
+            Debug.Log($"Falta el clip de audio {name}");
+        }
+
+        float actualVolume = Random.Range(volume.x, volume.y);
+        float actualPitch = Random.Range(pitch.x, pitch.y);
+
+        _onLoadMuic?.Invoke(audioClip(), (actualVolume, actualPitch), (_fadeInTime, _fadeOutTime), _loop);
+    }
     public void PlayMusic()
     {
         if (clips.Length == 0)  //por si acaso falta una pista de audio

@@ -28,14 +28,17 @@ public class AudioPerformer : MonoBehaviour
             {
                 AudioSource currentSource = gameObject.AddComponent<AudioSource>();
 
+                _audioPlayer[i].OnLoadMusic.
+                AddListener((AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop) =>
+                {
+                    SetValues(currentSource, clip, volume_pitch, fadeInOutTime, loop);
+                }
+                );
+
                 _audioPlayer[i].OnAudioOneShotPlay.
                 AddListener((AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop) =>
                 {
-                    if (currentSource.volume != volume_pitch.volume) currentSource.volume = volume_pitch.volume;
-                    if (currentSource.pitch != volume_pitch.pitch) currentSource.pitch = volume_pitch.pitch;
-                    if (currentSource.clip != clip) currentSource.clip = clip;
-                    if (currentSource.loop != loop) currentSource.loop = loop;
-
+                    SetValues(currentSource, clip, volume_pitch, fadeInOutTime, loop);
                     currentSource.Play();
                 }
                 );
@@ -43,11 +46,7 @@ public class AudioPerformer : MonoBehaviour
                 _audioPlayer[i].OnAudioPlay.
                 AddListener((AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop) =>
                 {
-                    if (currentSource.volume != volume_pitch.volume) currentSource.volume = volume_pitch.volume;
-                    if (currentSource.pitch != volume_pitch.pitch) currentSource.pitch = volume_pitch.pitch;
-                    if (currentSource.clip != clip) currentSource.clip = clip;
-                    if (currentSource.loop != loop) currentSource.loop = loop;
-
+                    SetValues(currentSource, clip, volume_pitch, fadeInOutTime, loop);
                     currentSource.PlayOneShot(clip);
                 }
                 );
@@ -55,5 +54,13 @@ public class AudioPerformer : MonoBehaviour
                 _audioPlayer[i].OnAudioStop.AddListener(() => currentSource.Stop());
             }
         }
+    }
+
+    private void SetValues(AudioSource source, AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop)
+    {
+        if (source.volume != volume_pitch.volume) source.volume = volume_pitch.volume;
+        if (source.pitch != volume_pitch.pitch) source.pitch = volume_pitch.pitch;
+        if (source.clip != clip) source.clip = clip;
+        if (source.loop != loop) source.loop = loop;
     }
 }
