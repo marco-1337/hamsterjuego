@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5959929387325691488}
   - component: {fileID: 2214831660902941206}
   m_Layer: 0
-  m_Name: Square (20)
+  m_Name: Pecera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
