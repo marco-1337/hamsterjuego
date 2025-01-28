@@ -19,7 +19,7 @@ public class UI_ReturnToMainMenu : MonoBehaviour
 
     private void ChangeToMainMenu()
     {
-        SaveGame();
+        //SaveGame();
         SceneManager.LoadScene(scene);
     }
 

@@ -14,6 +14,7 @@ public class CinematicManager : MonoBehaviour
     [SerializeField] private UnityEvent startMusic, stopMusic;
     private void Start()
     {
+        Time.timeScale = 1.0f;
         StartCoroutine(Cinematic());
         startMusic.Invoke();
     }
