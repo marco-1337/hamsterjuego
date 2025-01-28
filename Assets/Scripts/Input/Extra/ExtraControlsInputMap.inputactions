@@ -50,6 +50,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Skip",
+            "id": "00b76d7a-cdc6-47bd-9b2e-86bf26757842",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "cca1f767-ce88-4dc9-89da-8ef3e0c641fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=2)",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "43f69112-cd04-4342-ac88-935e06da23c2",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

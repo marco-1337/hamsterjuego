@@ -28,6 +28,17 @@ public class CinematicManager : MonoBehaviour
             yield return new WaitForSeconds(timeOfImage);
         }
         stopMusic.Invoke();
+        LoadNextScene();
+    }
+
+    public void SkipCutscene()
+    {
+        StopAllCoroutines();
+        LoadNextScene();
+    }
+
+    private void LoadNextScene()
+    {
         SceneManager.LoadScene("MainScene");
     }
 }
