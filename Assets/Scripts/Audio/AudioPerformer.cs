@@ -8,6 +8,8 @@ using UnityEngine;
 */
 public class AudioPerformer : MonoBehaviour
 {
+    [SerializeField]
+    float _timeToWait = 0.01f;
 
     AudioPlayer[] _audioPlayer;
     static private AudioPerformer _instance;
@@ -38,8 +40,9 @@ public class AudioPerformer : MonoBehaviour
                 _audioPlayer[i].OnAudioOneShotPlay.
                 AddListener((AudioClip clip, (float volume, float pitch) volume_pitch, (float fadeInTime, float _fadeOutTime) fadeInOutTime, bool loop) =>
                 {
-                    SetValues(currentSource, clip, volume_pitch, fadeInOutTime, loop);
+                    SetValues(currentSource, clip, (0, volume_pitch.pitch), fadeInOutTime, loop);
                     currentSource.Play();
+
                 }
                 );
 
@@ -62,5 +65,18 @@ public class AudioPerformer : MonoBehaviour
         if (source.pitch != volume_pitch.pitch) source.pitch = volume_pitch.pitch;
         if (source.clip != clip) source.clip = clip;
         if (source.loop != loop) source.loop = loop;
+    }
+
+    private IEnumerator(float time)
+    {
+        float actTime = 0;
+        while (actTime<= time)
+        {
+            actTime += _timeToWait;
+            yield return new WaitForSecondsRealtime(_timeToWait);
+        }
+        yield return new WaitForSecondsRealtime(_timeToWait);
+
+
     }
 }
