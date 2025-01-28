@@ -13,6 +13,9 @@ public class CreditController : MonoBehaviour
     [SerializeField]
     private UnityEvent _stopMusic;
 
+    [SerializeField]
+    private int _time = 30;
+
     private Timer _timer;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,7 @@ public class CreditController : MonoBehaviour
 
     private IEnumerator Tiempo()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(_time);
         _stopMusic.Invoke();
         SceneManager.LoadScene("MainMenu");
     }
