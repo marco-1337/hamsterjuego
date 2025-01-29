@@ -27,7 +27,6 @@ public class CinematicManager : MonoBehaviour
             image.sprite = imagesOfCinematic[i];
             yield return new WaitForSeconds(timeOfImage);
         }
-        stopMusic.Invoke();
         LoadNextScene();
     }
 
@@ -39,6 +38,7 @@ public class CinematicManager : MonoBehaviour
 
     private void LoadNextScene()
     {
+        stopMusic.Invoke();
         SceneManager.LoadScene("MainScene");
     }
 }
