@@ -5,48 +5,15 @@ using UnityEngine;
 public class GroundDetector : MonoBehaviour
 {
     [SerializeField] float distance = 0;
-    [SerializeField] Collider2D myCollider;
-    [SerializeField] PolygonCollider2D rocketCollider;
 
-    [SerializeField] Collider2D music1, music2, music3;
-    
-    public bool IsGrounded()
+    private LayerMask _groundMask;
+
+    private void Start()
     {
-        RaycastHit2D[] allTargets = Physics2D.RaycastAll(transform.position, Vector2.down, distance);
-        int i = 0;
-        bool grounded = false;
-        while(i < allTargets.Length && !grounded)
-        {
-            if(allTargets[i].collider != myCollider 
-                && allTargets[i].collider != rocketCollider
-                && allTargets[i].collider != music1
-                && allTargets[i].collider != music3
-                && allTargets[i].collider != music2) grounded = true;
-            ++i;
-        }
-        return grounded;
+        _groundMask = LayerMask.GetMask("Ground");
     }
 
-    public Vector2 SurfaceVector()
-    {
-        RaycastHit2D[] allTargets = Physics2D.RaycastAll(transform.position, Vector2.down, distance);
-        int i = 0;
-
-        while (i < allTargets.Length)
-        {
-            if (allTargets[i].collider != myCollider 
-                && allTargets[i].collider != rocketCollider
-                && allTargets[i].collider != music1
-                && allTargets[i].collider != music3
-                && allTargets[i].collider != music2)
-            {
-                return allTargets[i].collider.GetComponent<Transform>().right;
-            }
-            ++i;
-        }
-
-        return Vector2.zero;
-    }
+    public bool IsGrounded() => (bool)Physics2D.Raycast(transform.position, Vector2.down, distance, _groundMask);
 
     private void OnDrawGizmos()
     {
