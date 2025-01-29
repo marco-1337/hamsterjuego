@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1b13363f185da240b901ca1a27356fc
+guid: f0bc16ab15837e740a15d0b1571657cd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,70 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: termometro_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 858
-        width: 546
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3813d40e9389844282199a31b8129c5
-      internalID: 1594812340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: termometro_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 429
-        width: 546
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1310a31958150b2468df457784ae07f4
-      internalID: -1484884658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: termometro_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 546
-        height: 429
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a14ba9999e4fcd48a2d770be9b90ed5
-      internalID: -5194925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -182,10 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      termometro_0: 1594812340
-      termometro_1: -1484884658
-      termometro_2: -5194925
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

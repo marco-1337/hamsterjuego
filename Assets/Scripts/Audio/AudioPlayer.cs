@@ -23,18 +23,22 @@ public class AudioPlayer : ScriptableObject
     [SerializeField] private SoundClipOrder playOrder;
     [SerializeField] private bool _loop;
 
-    private UnityEvent<AudioClip, (float, float), (float, float), bool> _onLoadMuic = new UnityEvent<AudioClip, (float, float),  (float, float), bool>();
-    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnLoadMusic => _onLoadMuic;
+    #region events
+    private UnityEvent<AudioClip, (float, float), bool> _onLoadMuic = new UnityEvent<AudioClip, (float, float), bool>();
+    public UnityEvent<AudioClip, (float, float), bool> OnLoadMusic => _onLoadMuic;
 
-    private UnityEvent<AudioClip, (float, float), (float, float), bool> _onAudioOnShotPlay = new UnityEvent<AudioClip, (float, float),  (float, float), bool>();
-    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnAudioOneShotPlay => _onAudioOnShotPlay;
+    private UnityEvent<AudioClip, (float, float), float, bool> _onMusicPlay = new UnityEvent<AudioClip, (float, float),  float, bool>();
+    public UnityEvent<AudioClip, (float, float), float, bool> OnMusicPlay => _onMusicPlay;
 
-    private UnityEvent<AudioClip, (float, float), (float, float), bool> _onAudioPlay = new UnityEvent<AudioClip, (float, float), (float, float), bool>();
-    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnAudioPlay => _onAudioPlay; 
+    /*private UnityEvent<AudioClip, (float, float), (float, float), bool> _onAudioPlayFade = new UnityEvent<AudioClip, (float, float), (float, float), bool>();
+    public UnityEvent<AudioClip, (float, float), (float, float), bool> OnAudioPlayFadeFade => _onAudioPlayFade;*/
 
-    private UnityEvent onAudioStop = new UnityEvent();
-    public UnityEvent OnAudioStop => onAudioStop;
+    private UnityEvent<AudioClip, (float, float), float, bool> _onAudioPlay = new UnityEvent<AudioClip, (float, float), float, bool>();
+    public UnityEvent<AudioClip, (float, float), float, bool> OnAudioPlay => _onAudioPlay; 
 
+    private UnityEvent<float> onAudioStop = new UnityEvent<float>();
+    public UnityEvent<float> OnAudioStop => onAudioStop;
+    #endregion
 
     private AudioClip audioClip()
     {
@@ -60,7 +64,7 @@ public class AudioPlayer : ScriptableObject
         return clip;
     }
 
-    public void LoadMuisic()
+    public void LoadMusic()
     {
         if (clips.Length == 0)  //por si acaso falta una pista de audio
         {
@@ -70,7 +74,7 @@ public class AudioPlayer : ScriptableObject
         float actualVolume = Random.Range(volume.x, volume.y);
         float actualPitch = Random.Range(pitch.x, pitch.y);
 
-        _onLoadMuic?.Invoke(audioClip(), (actualVolume, actualPitch), (_fadeInTime, _fadeOutTime), _loop);
+        _onLoadMuic?.Invoke(audioClip(), (actualVolume, actualPitch), _loop);
     }
     public void PlayMusic()
     {
@@ -82,9 +86,8 @@ public class AudioPlayer : ScriptableObject
         float actualVolume = Random.Range(volume.x, volume.y);
         float actualPitch = Random.Range(pitch.x, pitch.y);
 
-        _onAudioOnShotPlay?.Invoke(audioClip(), (actualVolume, actualPitch), (_fadeInTime,_fadeOutTime), _loop);
+        _onMusicPlay?.Invoke(audioClip(), (actualVolume, actualPitch), _fadeInTime, _loop);
     }
-
     public void Play()
     {
         if (clips.Length == 0)  //por si acaso falta una pista de audio
@@ -95,10 +98,10 @@ public class AudioPlayer : ScriptableObject
         float actualVolume = Random.Range(volume.x, volume.y);
         float actualPitch = Random.Range(pitch.x, pitch.y);
 
-        _onAudioPlay?.Invoke(audioClip(), (actualVolume, actualPitch), (_fadeInTime, _fadeOutTime), _loop);
+        _onAudioPlay?.Invoke(audioClip(), (actualVolume, actualPitch), _fadeInTime, _loop);
     }
 
-    public void Stop() => onAudioStop?.Invoke();
+    public void Stop() => onAudioStop?.Invoke(_fadeOutTime);
 
 
     enum SoundClipOrder

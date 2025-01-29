@@ -656,37 +656,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &766657264
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 766657266}
-  m_Layer: 0
-  m_Name: MusicLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &766657266
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766657264}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.272783, y: 19.351868, z: 0.341322}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964946079
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +819,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 00be73d0c05d8ff4eb2ff98281528103, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: LoadMuisic
+        m_MethodName: LoadMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -862,7 +831,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: e8bf0ef74422d3a4b9aacf989a354b36, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: LoadMuisic
+        m_MethodName: LoadMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -874,7 +843,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: b495cc6156a08c343902e918bc8621bb, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: LoadMuisic
+        m_MethodName: LoadMusic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1180,11 +1149,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 397810157797656518, guid: 08c61eacf5d1daf4d9d2c717e7162d5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.14823
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 397810157797656518, guid: 08c61eacf5d1daf4d9d2c717e7162d5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 231.57063
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 397810157797656518, guid: 08c61eacf5d1daf4d9d2c717e7162d5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1218,6 +1187,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5233016935150142964, guid: 08c61eacf5d1daf4d9d2c717e7162d5a, type: 3}
+      propertyPath: _timeToWait
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309312241929007146, guid: 08c61eacf5d1daf4d9d2c717e7162d5a, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8309312241929007146, guid: 08c61eacf5d1daf4d9d2c717e7162d5a, type: 3}
       propertyPath: m_Name
       value: AudioPerformer
@@ -1235,4 +1212,3 @@ SceneRoots:
   - {fileID: 108641482}
   - {fileID: 517722656}
   - {fileID: 4815167688671183000}
-  - {fileID: 766657266}
