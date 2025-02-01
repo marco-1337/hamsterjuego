@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Furiosos&Cachondos
   productName: Ball-istic Hamster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -279,7 +279,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: f0bc16ab15837e740a15d0b1571657cd, type: 3}
+      m_Icon: {fileID: 2800000, guid: faf9211315b7d5841a20c085f8ed5ba8, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
