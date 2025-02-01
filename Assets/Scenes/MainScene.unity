@@ -7330,6 +7330,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
+      propertyPath: _rays
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
+      propertyPath: _width
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: music1
       value: 
       objectReference: {fileID: 1696186510}
