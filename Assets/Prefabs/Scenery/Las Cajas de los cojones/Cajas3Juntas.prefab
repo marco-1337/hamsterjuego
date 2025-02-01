@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6850516236399363281}
   - component: {fileID: 1615777416830397651}
   - component: {fileID: 5747822974612162089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sticky (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553546458914098723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cajas3Juntas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 2787326220795586112}
   - component: {fileID: 2835073135256659202}
   - component: {fileID: 5839832680894014110}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sticky (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5570972628976742255}
   - component: {fileID: 7825459793517720940}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: moco_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186199809386955483}
   - component: {fileID: 7198750281577806957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: moco_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236094252766605758}
   - component: {fileID: 6317517409883408661}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: moco_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 7666118153792113119}
   - component: {fileID: 1490711285139580444}
   - component: {fileID: 1037697939548808630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sticky (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,6 +694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stikin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3502370267307401646, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3979219038718748701, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.31
@@ -819,6 +823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stikin
       objectReference: {fileID: 0}
+    - target: {fileID: 3502370267307401646, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3979219038718748701, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.09
@@ -935,6 +943,10 @@ PrefabInstance:
     - target: {fileID: 3502370267307401646, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
       propertyPath: m_Name
       value: Stikin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502370267307401646, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3979219038718748701, guid: 38b692cabe5588e4b97d7d1aa0de9d41, type: 3}
       propertyPath: m_LocalPosition.x

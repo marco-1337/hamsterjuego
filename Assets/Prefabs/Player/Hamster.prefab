@@ -548,9 +548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9aee4f3315df304f99105f9ba92ec99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1.3
-  myCollider: {fileID: 6828639392878660936}
-  rocketCollider: {fileID: 5324005463113596022}
+  _distance: 1.5
+  _rays: 5
+  _width: 0.8
 --- !u!247 &1762995398276342970
 ConstantForce2D:
   m_ObjectHideFlags: 0
@@ -588,5 +588,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee562e5d1e8dbc64d90995787944e775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guardado: {fileID: 11400000, guid: 01ac1d1f70271454a859c5fdfe1a9d8a, type: 2}
   pipas: {fileID: 11400000, guid: bdc327aa779f18742b6bc0b5c69003d2, type: 2}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2035831945002725188}
   - component: {fileID: 1072789756422256369}
   - component: {fileID: 2705723777756153047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Globo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

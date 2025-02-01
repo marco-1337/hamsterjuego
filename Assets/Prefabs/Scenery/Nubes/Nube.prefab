@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7825864702206032855}
   - component: {fileID: 8560394563488372677}
   - component: {fileID: 1428111290466741492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Nube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

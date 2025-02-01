@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1988654492449105258}
   - component: {fileID: 8342958857983573513}
   - component: {fileID: 2180386810310339647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ovni
   m_TagString: Untagged
   m_Icon: {fileID: 0}

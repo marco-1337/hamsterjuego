@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2727787156567967470}
   - component: {fileID: 4922478403246607819}
   - component: {fileID: 6669497535086859576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Esticky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5407237317076750496}
   - component: {fileID: 1580725995538047083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: moco_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 392504315668021927}
   - component: {fileID: 2794603407325359306}
   - component: {fileID: 2697057232902036080}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: caja 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6029743073620464487}
   - component: {fileID: 6503262378588978927}
   - component: {fileID: 1906186257056596175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Refresco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 1953930767848269697}
   - component: {fileID: 3741434804702920241}
   - component: {fileID: 7966939412843902282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1533038281024796329}
   - component: {fileID: 826422732877527308}
   - component: {fileID: 7662796085056407078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Escaleras
   m_TagString: Untagged
   m_Icon: {fileID: 0}

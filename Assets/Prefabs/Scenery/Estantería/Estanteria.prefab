@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1127465889715291993}
   - component: {fileID: 7924946591856608147}
   - component: {fileID: 149756662144868925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Estanteria
   m_TagString: Untagged
   m_Icon: {fileID: 0}

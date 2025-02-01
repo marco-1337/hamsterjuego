@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5820219838981964655}
   - component: {fileID: 1343341582866161298}
   - component: {fileID: 7884294873264379058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NORIA CAB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 3542628459606636888}
   - component: {fileID: 4749373369201999098}
   - component: {fileID: 1516212025552570054}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cesta noria
   m_TagString: Untagged
   m_Icon: {fileID: 0}

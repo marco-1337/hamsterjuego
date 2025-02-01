@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1971358358968557792}
   - component: {fileID: 8830213316209340553}
   - component: {fileID: 9029340695698052444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cobete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

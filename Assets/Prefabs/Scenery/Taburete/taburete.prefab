@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4906645236033642537}
   - component: {fileID: 7053339607628023363}
   - component: {fileID: 8417253762376602567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: taburete
   m_TagString: Untagged
   m_Icon: {fileID: 0}

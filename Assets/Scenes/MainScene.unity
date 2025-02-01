@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JAULA2
       objectReference: {fileID: 0}
+    - target: {fileID: 772708009530645459, guid: 7902f1661271f304f956d46b530ff115, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2348949427566260691, guid: 7902f1661271f304f956d46b530ff115, type: 3}
       propertyPath: m_Size.x
       value: 3.557365
@@ -2678,6 +2682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Estanteria
       objectReference: {fileID: 0}
+    - target: {fileID: 4720335198893092948, guid: 36b6b8f7e49de8049b86934dbc32d250, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3280,7 +3288,7 @@ GameObject:
   - component: {fileID: 765977860}
   - component: {fileID: 765977859}
   - component: {fileID: 765977861}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4256,7 +4264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995593087}
   - component: {fileID: 995593086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4974,7 +4982,7 @@ SpriteRenderer:
   m_Size: {x: 133.33, y: 150.03288}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1143990046
@@ -6106,6 +6114,10 @@ PrefabInstance:
     - target: {fileID: 4720335198893092948, guid: 36b6b8f7e49de8049b86934dbc32d250, type: 3}
       propertyPath: m_Name
       value: Estanteria (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4720335198893092948, guid: 36b6b8f7e49de8049b86934dbc32d250, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7329,6 +7341,10 @@ PrefabInstance:
       propertyPath: music3
       value: 
       objectReference: {fileID: 312005077}
+    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
+      propertyPath: distance
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2613895302226261362, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: _force
       value: 1000
@@ -7976,6 +7992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: taburete (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1518786470003878547, guid: 35265ebe55a19f14baf67592b7febbf8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4906645236033642537, guid: 35265ebe55a19f14baf67592b7febbf8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -8268,6 +8288,10 @@ PrefabInstance:
     - target: {fileID: 3219177209355319447, guid: 04c98907ac4758d48ac21324286b6e51, type: 3}
       propertyPath: m_Name
       value: lampara
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219177209355319447, guid: 04c98907ac4758d48ac21324286b6e51, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6089716805872523037, guid: 04c98907ac4758d48ac21324286b6e51, type: 3}
       propertyPath: m_LocalScale.x
@@ -8686,6 +8710,10 @@ PrefabInstance:
     - target: {fileID: 6038325731065560443, guid: ccb5f06af3bac8b4891e49d25a248d5a, type: 3}
       propertyPath: m_Name
       value: BarcoPapel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038325731065560443, guid: ccb5f06af3bac8b4891e49d25a248d5a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6571876214370140244, guid: ccb5f06af3bac8b4891e49d25a248d5a, type: 3}
       propertyPath: m_LocalPosition.x

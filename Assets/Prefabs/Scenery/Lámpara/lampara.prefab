@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8457339258580452136}
   - component: {fileID: 629087291245478624}
   - component: {fileID: 801692610655040554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lampara
   m_TagString: Untagged
   m_Icon: {fileID: 0}

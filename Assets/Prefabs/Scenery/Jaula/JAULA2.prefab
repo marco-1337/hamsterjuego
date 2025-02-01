@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3699177414322609011}
   - component: {fileID: 3922272002834662907}
   - component: {fileID: 4993208664424799670}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JAULA2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

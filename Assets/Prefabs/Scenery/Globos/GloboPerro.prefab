@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5392799597078753718}
   - component: {fileID: 4299319009798641676}
   - component: {fileID: 7465207354176020980}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GloboPerro
   m_TagString: Untagged
   m_Icon: {fileID: 0}

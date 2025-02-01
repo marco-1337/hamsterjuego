@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6571876214370140244}
   - component: {fileID: 3734116708216169188}
   - component: {fileID: 946789053817386282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BarcoPapel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
