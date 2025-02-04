@@ -75,12 +75,17 @@ public class AudioPerformer : MonoBehaviour
         if (source.loop != loop) source.loop = loop;
     }
 
-    private IEnumerator FadeIn(float time, AudioSource audioSource, float targetVolume)
+    private IEnumerator Fade(bool fadeIn, float time, AudioSource audioSource, float targetVolume)
     {
+        if(!fadeIn)
+        {
+
+        }
+
         audioSource.volume = 0;
         float actTime = 0;
-        float volumeUp = _timeToWait/time;
-        while (actTime <= Mathf.Abs(time))
+        float startVolume =audioSource.volume;
+        while (actTime <= )
         {
             audioSource.volume += volumeUp;
             actTime += _timeToWait;
@@ -88,7 +93,7 @@ public class AudioPerformer : MonoBehaviour
         }
         audioSource.volume = targetVolume;
     }
-    private IEnumerator FadeOut(float time, AudioSource audioSource)
+    private IEnumerator FadeOut( float time, AudioSource audioSource, )
     {
         Debug.Log("Bajando volumen, volumen a: " + audioSource.volume);
         audioSource.volume = audioSource.volume;
