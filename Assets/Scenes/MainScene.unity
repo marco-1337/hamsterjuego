@@ -4982,7 +4982,7 @@ SpriteRenderer:
   m_Size: {x: 133.33, y: 150.03288}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1143990046
@@ -7321,42 +7321,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1566948746245085382, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2069497974425463659, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: _rays
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: _width
-      value: 1.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: music1
-      value: 
-      objectReference: {fileID: 1696186510}
-    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: music2
-      value: 
-      objectReference: {fileID: 1772130114}
-    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: music3
-      value: 
-      objectReference: {fileID: 312005077}
-    - target: {fileID: 2254754156484803652, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: distance
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613895302226261362, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: _force
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 2613895302226261362, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: _UI_fuel
       value: 
@@ -7401,17 +7365,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4374170216749975500, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6565184717736063383, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: m_Name
       value: Hamster
-      objectReference: {fileID: 0}
-    - target: {fileID: 7926397055931535398, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
