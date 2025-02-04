@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 142491455}
   - component: {fileID: 142491454}
   - component: {fileID: 142491453}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 428422645}
   - component: {fileID: 428422644}
   - component: {fileID: 428422643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3763,7 +3763,7 @@ GameObject:
   - component: {fileID: 867385691}
   - component: {fileID: 867385690}
   - component: {fileID: 867385689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4996,7 +4996,7 @@ GameObject:
   - component: {fileID: 1143990049}
   - component: {fileID: 1143990048}
   - component: {fileID: 1143990047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5373,7 +5373,7 @@ GameObject:
   - component: {fileID: 1257192349}
   - component: {fileID: 1257192348}
   - component: {fileID: 1257192347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5845,7 +5845,7 @@ GameObject:
   - component: {fileID: 1448282984}
   - component: {fileID: 1448282983}
   - component: {fileID: 1448282982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lapiz2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7099,7 +7099,7 @@ GameObject:
   - component: {fileID: 1871255201}
   - component: {fileID: 1871255203}
   - component: {fileID: 1871255202}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
