@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,6 @@ using UnityEngine.InputSystem.Controls;
 */
 public class AudioPerformer : MonoBehaviour
 {
-    [SerializeField]
-    float _timeToWait = 0.01f;
 
     AudioPlayer[] _audioPlayer;
     static private AudioPerformer _instance;
@@ -44,7 +43,7 @@ public class AudioPerformer : MonoBehaviour
                     SetValues(currentSource, clip, volume_pitch, loop);
 
                     currentSource.Play();
-                    //StartCoroutine(FadeIn(fadeInTime, currentSource, volume_pitch.volume));
+                    StartCoroutine(Fade(true, fadeInTime, currentSource, volume_pitch.volume));
                 }
                 );
 
@@ -53,13 +52,13 @@ public class AudioPerformer : MonoBehaviour
                 {
                     SetValues(currentSource, clip, volume_pitch, loop);
                     currentSource.PlayOneShot(clip);
-                    //StartCoroutine(FadeIn(fadeInTime, currentSource, volume_pitch.volume));
+                    StartCoroutine(Fade(true, fadeInTime, currentSource, volume_pitch.volume));
                 }
                 );
 
                 _audioPlayer[i].OnAudioStop.AddListener((float fadeOutTime) => 
                 {
-                    //StartCoroutine(FadeOut(fadeOutTime, currentSource));
+                    StartCoroutine(Fade(false, fadeOutTime, currentSource, 0));
                     currentSource.Stop();
                 }
                 );
@@ -79,34 +78,24 @@ public class AudioPerformer : MonoBehaviour
     {
         if(!fadeIn)
         {
+            double sourceLength = (double)audioSource.clip.samples / audioSource.clip.frequency;
+            Debug.Log(audioSource.clip.name + " Volume: " + audioSource.volume + ", fadeIn: " + fadeIn);
+            yield return new WaitForSeconds((float) sourceLength - time);
+            Debug.Log(audioSource.clip.name + " Volume: " + audioSource.volume + ", fadeIn: " + fadeIn);
 
         }
 
         audioSource.volume = 0;
         float actTime = 0;
         float startVolume =audioSource.volume;
-        while (actTime <= )
-        {
-            audioSource.volume += volumeUp;
-            actTime += _timeToWait;
-            yield return new WaitForSecondsRealtime(_timeToWait);
-        }
-        audioSource.volume = targetVolume;
-    }
-    private IEnumerator FadeOut( float time, AudioSource audioSource, )
-    {
-        Debug.Log("Bajando volumen, volumen a: " + audioSource.volume);
-        audioSource.volume = audioSource.volume;
-        float actTime = 0;
-        float volumeDown = _timeToWait / time;
         while (actTime <= time)
         {
-            audioSource.volume -= volumeDown;
-            Debug.Log(audioSource.volume+", "+ volumeDown);
-            actTime += _timeToWait;
-            yield return new WaitForSecondsRealtime(_timeToWait);
+            actTime += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(startVolume, targetVolume, actTime / time);
+            //Debug.Log(audioSource.clip.name + " Volume: " + audioSource.volume + ", fadeIn: " + fadeIn);
+            yield return null;
         }
-        audioSource.volume = 0;
-        Debug.Log("Yo ya");
+        audioSource.volume = targetVolume;
+        yield break;
     }
 }
