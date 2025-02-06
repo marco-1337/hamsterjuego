@@ -356,36 +356,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c78a9a3b1e3cb045a33c26e61e3c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerEnter:
+  _playMusic1:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b495cc6156a08c343902e918bc8621bb, type: 2}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: PlayMusic
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _triggerExit:
+      m_Calls: []
+  _stopMusic1:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b495cc6156a08c343902e918bc8621bb, type: 2}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  _playMusic2:
+    m_PersistentCalls:
+      m_Calls: []
+  _stopMusic2:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &548281165
 Transform:
   m_ObjectHideFlags: 0
@@ -476,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4353853779084589468, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2276
+      value: -2.838
       objectReference: {fileID: 0}
     - target: {fileID: 4353853779084589468, guid: 8c8855c1e96a7a54e982c97d41c9b8c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -579,7 +561,7 @@ Transform:
   m_GameObject: {fileID: 1148852794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.166949, y: 0.0609359, z: -1.1469914}
+  m_LocalPosition: {x: -1.166949, y: 3.42, z: -1.1469914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -971,10 +953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c78a9a3b1e3cb045a33c26e61e3c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triggerEnter:
+  _playMusic1:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: faffb1993349e474c98482993e96ffd6, type: 2}
+      - m_Target: {fileID: 11400000, guid: 00be73d0c05d8ff4eb2ff98281528103, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
         m_MethodName: PlayMusic
         m_Mode: 1
@@ -986,10 +968,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _triggerExit:
+  _stopMusic1:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: faffb1993349e474c98482993e96ffd6, type: 2}
+      - m_Target: {fileID: 11400000, guid: 00be73d0c05d8ff4eb2ff98281528103, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _playMusic2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e8bf0ef74422d3a4b9aacf989a354b36, type: 2}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _stopMusic2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e8bf0ef74422d3a4b9aacf989a354b36, type: 2}
         m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
         m_MethodName: Stop
         m_Mode: 1
@@ -1010,7 +1022,7 @@ Transform:
   m_GameObject: {fileID: 1930490394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.0675, y: 2.4481637, z: 0.775249}
+  m_LocalPosition: {x: 9.0675, y: 9.84, z: 0.775249}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1048,7 +1060,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.0194, y: -3.1358838}
+  m_Offset: {x: -9.0194, y: -6.5208397}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1059,7 +1071,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.0388, y: 7.2717676}
+  m_Size: {x: 19.0388, y: 0.50185585}
   m_EdgeRadius: 0
 --- !u!1001 &701600856174069568
 PrefabInstance:

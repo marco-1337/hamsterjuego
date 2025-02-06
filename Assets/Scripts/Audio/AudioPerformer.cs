@@ -78,6 +78,7 @@ public class AudioPerformer : MonoBehaviour
     {
         if(!fadeIn)
         {
+
             double sourceLength = (double)audioSource.clip.samples / audioSource.clip.frequency;
             Debug.Log(audioSource.clip.name + " Volume: " + audioSource.volume + ", fadeIn: " + fadeIn);
             yield return new WaitForSeconds((float) sourceLength - time);
