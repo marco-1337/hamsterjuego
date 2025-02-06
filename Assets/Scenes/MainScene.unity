@@ -4982,7 +4982,7 @@ SpriteRenderer:
   m_Size: {x: 133.33, y: 150.03288}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1143990046
@@ -8069,6 +8069,18 @@ PrefabInstance:
     - target: {fileID: 4203307761255513995, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980178896202043440, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980178896202043440, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.21176472
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980178896202043440, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.227451
       objectReference: {fileID: 0}
     - target: {fileID: 5322372403820056711, guid: f00def41d49b9f442811f6e06a7fbe21, type: 3}
       propertyPath: _hamsterCenter
